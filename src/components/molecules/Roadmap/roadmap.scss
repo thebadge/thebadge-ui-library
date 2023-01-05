@@ -1,0 +1,63 @@
+@use '../../../assets/scss/functions/_base.functions.scss' as *;
+@use '../../../assets/scss/variables/variables.module';
+
+.roadmap {
+  &__timeline {
+    height: 58px;
+    width: 100%;
+    border-radius: 24px;
+    margin: 24px 0;
+  }
+  &__circle {
+    height: 78px;
+    width: 78px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    border: 10px salmon solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+
+    &::before {
+      content: '';
+      width: 0px;
+      height: 0px;
+      position: absolute;
+      border-left: 16px solid transparent;
+      border-right: 16px solid transparent;
+      border-top: 24px solid salmon;
+      margin-top: 84px;
+    }
+
+    p {
+      font-size: xx-large;
+      font-weight: 700;
+      color: rgb(175, 175, 175);
+    }
+  }
+  &__year {
+    p {
+      color: white;
+      font-weight: 700;
+    }
+  }
+  &__text {
+    .line {
+      width: 2px;
+      height: 50px;
+      border: 2px dashed white;
+      margin: 0 50% 8px;
+    }
+    :nth-child(2) {
+      text-transform: uppercase;
+    }
+
+    p {
+      color: white;
+      font-weight: 700;
+      font-size: small;
+      text-align: center;
+    }
+  }
+}
